@@ -1,0 +1,18 @@
+<div class="center">
+  <%= form_for([category, expense], :html => {class: "form-inline"})  do |f| %>
+      <div id="error_explanation">
+        <h2 id="error_message"></h2>
+        <ul id="error_list"></ul>
+      </div>
+
+    <div class="inline">
+      <%= f.text_field :description, :placeholder => "Description" %>
+    </div>
+
+    <div class="inline">
+      <%= f.text_field :cost, :placeholder => "Cost"  %>
+    </div>
+
+    <%= f.submit class: "btn btn-primary btn-sm" %>
+  <% end %>
+</div>

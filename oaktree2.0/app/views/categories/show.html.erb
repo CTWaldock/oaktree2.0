@@ -1,0 +1,28 @@
+<!-- NO LONGER IN USE -->
+<!--
+<h1><%=@category.title%></h1>
+<h4><%= link_to "Return to Budget", budget_path(@category.budget) %></h4>
+<h4 class="warning"><%= link_to "Delete Category", category_path(@category), :method => :delete %></h4>
+<br>
+<h4>Add Expense</h4>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render partial: "categories/form", locals: {category: @category, expense: @new_expense} %>
+    <br></br>
+
+    <p>Total costs amount to <span id="cost"><%=number_to_currency(@category.subtotal) %></span>.</p>
+    <p>Represents <span id="current"><%=number_to_percentage(@category.current_percentage, precision: 0)%></span> of current budget expenditure for <%= @category.budget.name%>.</p>
+    <p>Represents <span id="total"><%=number_to_percentage(@category.total_percentage, precision: 0)%></span> of maximum budget expenditure for <%= @category.budget.name%>.</p>
+
+   <%= render partial: "categories/expenses", locals: {expenses: @expenses} %>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    bindExpenseForm();
+    bindDeleteLinks();
+  });
+</script> -->

@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-md-3">Category</th>
+      <th class="col-md-3">Description</th>
+      <th class="col-md-3">% of Category Subtotal</th>
+      <th class="col-md-1">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% expenses.each do |expense| %>
+      <tr>
+        <th scope="row" class="category"><%= link_to expense.category.title, category_path(expense.category) %></th>
+        <td><%= expense.description %></td>
+        <td><%= number_to_percentage(expense.category_percentage, precision: 0)%></td>
+        <td><%= number_to_currency(expense.cost) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
